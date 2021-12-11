@@ -2,6 +2,8 @@ noblog is a static blog framework that's almost like having no static blog frame
 accomplishes things using POSIX utilities and file permissions, like your father and his father 
 before him.
 
+Used in production for one known site: [blog.noahlevenson.com](https://blog.noahlevenson.com)
+
 Instructions:
 
 1. Initialize a new blog with `init.py`. 

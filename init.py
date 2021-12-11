@@ -14,7 +14,6 @@ if os.path.exists(f"./{cfg['DIST']}"):
 
 os.mkdir(cfg["DIST"])
 subprocess.call([f"./{cfg['NEW']}", "test-post", "Test post"])
-
-#subprocess.call([f"./{cfg['BUILD']}"])
-
+subprocess.call([f"./{cfg['PUBLISH']}", "test-post"])
+subprocess.call([f"./{cfg['BUILD']}"])
 print(f"Initialized new blog in '{cfg['DIST']}'")

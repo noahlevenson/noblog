@@ -57,4 +57,4 @@ with open(f"./{cfg['DIST']}/index.html", "w") as index:
 
   index.write("</table>")
 
-print(f"Done! ({len(posts_t)} posts)")
+print(f"Built! ({len(posts_t)} posts)")

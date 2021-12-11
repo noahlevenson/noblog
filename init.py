@@ -8,7 +8,7 @@ import subprocess
 with open("config.yml", "r") as stream:
   cfg = yaml.safe_load(stream)
 
-if os.path.exists(f"./{cfg['DIST']}"):
+if os.path.exists(f"{cfg['DIST']}"):
   print(f"Error: content path '{cfg['DIST']}' exists!")
   sys.exit()
 

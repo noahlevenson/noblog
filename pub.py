@@ -15,7 +15,7 @@ url = sys.argv[1]
 with open("config.yml", "r") as stream:
   cfg = yaml.safe_load(stream)
 
-if not os.path.exists(f"./{cfg['DIST']}"):
+if not os.path.exists(f"{cfg['DIST']}"):
   print(f"Error: content path '{cfg['DIST']}' does not exist!")
   sys.exit()
 

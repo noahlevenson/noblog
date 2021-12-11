@@ -17,11 +17,11 @@ with open("config.yml", "r") as stream:
 
 path = f"{cfg['DIST']}/{url}"
 
-if not os.path.exists(f"./{cfg['DIST']}"):
+if not os.path.exists(f"{cfg['DIST']}"):
   print(f"Error: content path '{cfg['DIST']}' does not exist!")
   sys.exit()
 
-if os.path.exists(f"./{cfg['DIST']}/{url}"):
+if os.path.exists(f"{cfg['DIST']}/{url}"):
   print(f"Error: relative URL /{url} is already taken!")
   sys.exit()
 

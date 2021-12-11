@@ -1,7 +1,7 @@
 NEW: new.py
 BUILD: build.py
 PUBLISH: pub.py
-DIST: dist
+DIST: ./dist
 PUB: pub.yml
 TEMPLATE: index.html
 TITLE: $TITLE

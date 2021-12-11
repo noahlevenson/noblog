@@ -1,0 +1,6 @@
+NEW: new.py
+BUILD: build.py
+DIST: dist
+PUB: pub.yml
+TEMPLATE: index.html
+TITLE: $TITLE

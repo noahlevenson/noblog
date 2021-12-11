@@ -34,5 +34,5 @@ with open(f"{cfg['TEMPLATE']}", "r") as template:
 with open(f"{path}/index.html", "w") as index:
   index.write(titled)
 
-subprocess.call(["chmod", "700", f"./{path}"])
+subprocess.call(["chmod", "700", f"{path}"])
 print(f"New unpublished post: /{url}")

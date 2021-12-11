@@ -21,12 +21,12 @@ if not os.path.exists(f"{cfg['DIST']}"):
 
 path = f"{cfg['DIST']}/{url}"
 
-if not os.path.exists(f"./{path}/index.html"):
+if not os.path.exists(f"{path}/index.html"):
   print(f"Error: No post found at {path}")
   sys.exit()
 
 with open(f"{path}/{cfg['PUB']}", "w") as pub:
   pub.write(f"TIMESTAMP: {str(int(time.time()))}\n")
 
-subprocess.call(["chmod", "755", f"./{path}"])
+subprocess.call(["chmod", "755", f"{path}"])
 print(f"Published post: /{url}")

@@ -4,6 +4,5 @@ PUBLISH: pub.py
 DIST: ./dist
 PUB: pub.yml
 TEMPLATE: index.html
-POST_CSS: post.css
-INDEX_CSS: index.css
+CSS: style.css
 TITLE: $TITLE

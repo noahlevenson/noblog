@@ -41,7 +41,7 @@ for post in posts_t:
 posts_t.sort(key=lambda x: x["timestamp"], reverse=True)
 
 with open(f"{cfg['DIST']}/index.html", "w") as index:
-  index.write('<link rel="stylesheet" href="index.css"><table>')
+  index.write('<link rel="stylesheet" href="style.css"><body id="index"><table>')
   
   for post in posts_t:
     parser = TitleParser()
@@ -55,6 +55,6 @@ with open(f"{cfg['DIST']}/index.html", "w") as index:
     index.write(f'<td><a href="/{post["post"]}">{title}</a></td>')
     index.write("</tr>")
 
-  index.write("</table>")
+  index.write("</table></body>")
 
 print(f"Built! ({len(posts_t)} posts)")

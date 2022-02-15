@@ -8,8 +8,10 @@
 #index {
   max-width: 600px;
   margin-left: 70px;
-  margin-right: 70px;
-  line-height: 24px;
+}
+
+td {
+  padding-bottom: 6px;
 }
 
 @media only screen and (max-width: 600px) {

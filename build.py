@@ -41,7 +41,7 @@ for post in posts_t:
 posts_t.sort(key=lambda x: x["timestamp"], reverse=True)
 
 with open(f"{cfg['DIST']}/index.html", "w") as index:
-  index.write('<link rel="stylesheet" href="style.css"><body id="index"><table>')
+  index.write(f"<link rel=\"stylesheet\" href=\"style.css\"><title>{cfg['BLOG_TITLE']}</title><body id=\"index\"><table>")
   
   for post in posts_t:
     parser = TitleParser()

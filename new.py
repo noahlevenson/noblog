@@ -29,7 +29,7 @@ print(f"Adding '{title}' as /{url}...");
 os.mkdir(f"{cfg['DIST']}/{url}")
 
 with open(f"{cfg['TEMPLATE']}", "r") as template:
-  titled = template.read().replace(cfg['TITLE'], title)
+  titled = template.read().replace(cfg['POST_TITLE'], title)
 
 with open(f"{path}/index.html", "w") as index:
   index.write(titled)

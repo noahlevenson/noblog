@@ -5,4 +5,5 @@ DIST: ./dist
 PUB: pub.yml
 TEMPLATE: index.html
 CSS: style.css
-TITLE: $TITLE
+POST_TITLE: $TITLE
+BLOG_TITLE: Noah Levenson's homepage

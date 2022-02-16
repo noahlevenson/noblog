@@ -81,4 +81,4 @@ with open(f"{cfg['DIST']}/index.html", "w") as index:
 
   index.write("</table></body>")
 
-print(f"Built! ({len(posts_t) + len(pinned)} posts)")
+print(f"Built! ({len(posts_t)} posts, {len(pinned)} pinned)")

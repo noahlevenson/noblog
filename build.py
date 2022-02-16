@@ -37,12 +37,36 @@ for post in posts_t:
   with open(f"{cfg['DIST']}/{post['post']}/{cfg['PUB']}", "r") as stream:
     pub = yaml.safe_load(stream)
     post["timestamp"] = pub['TIMESTAMP']
+    post["pin"] = pub["PIN"]
 
+"""
+posts_t is a list of regular posts, sorted by timestamp; we extract the pinned posts from that 
+list and keep them in a list called pinned
+"""
 posts_t.sort(key=lambda x: x["timestamp"], reverse=True)
+pinned = list(filter(lambda x: x["pin"] == True, posts_t))
+
+for pinned_post in pinned:
+  posts_t.remove(pinned_post)
 
 with open(f"{cfg['DIST']}/index.html", "w") as index:
   index.write(f"<link rel=\"stylesheet\" href=\"style.css\"><title>{cfg['BLOG_TITLE']}</title><body id=\"index\"><table>")
   
+  # Write all the pinned posts to the top
+  for pinned_post in pinned:
+    parser = TitleParser()
+
+    with open(f"{cfg['DIST']}/{pinned_post['post']}/index.html", "r") as html:
+      parser.feed(html.read())
+    
+    title = parser.title
+    index.write("<tr>")
+    index.write(f"<td>*</td>")
+    index.write(f'<td><strong><a href="/{pinned_post["post"]}">{title}</a></strong></td>')
+    index.write("</tr>")
+
+  # Write all the regular posts below the pinned posts
+
   for post in posts_t:
     parser = TitleParser()
 
@@ -57,4 +81,4 @@ with open(f"{cfg['DIST']}/index.html", "w") as index:
 
   index.write("</table></body>")
 
-print(f"Built! ({len(posts_t)} posts)")
+print(f"Built! ({len(posts_t) + len(pinned)} posts)")

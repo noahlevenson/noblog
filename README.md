@@ -1,8 +1,5 @@
 noblog is a static blog framework that's almost like having no static blog framework at all. It 
-accomplishes things using POSIX utilities and file permissions, like your father and his father 
-before him.
-
-Used in production for one known site: [blog.noahlevenson.com](https://blog.noahlevenson.com)
+accomplishes things using POSIX utilities and file permissions -- like your father did, and his father before him.
 
 Instructions:
 
@@ -14,8 +11,9 @@ Instructions:
 
 4. Publish a post with `pub.py [relative URL]`.
 
-5. Rebuild the index with `build.py`.
+5. Pin a post with `pin.py [relative URL]`.
+
+6. Rebuild the index with `build.py`.
 
 To delete a post, just rm -rf its directory and rebuild. To edit a post, just edit its HTML and 
-rebuild. To modify a post's URL, just rename its directory and rebuild. You can't unpublish a post 
-yet, but maybe I'll add that soon.
+rebuild. To modify a posts's title, just edit its `<title>` tag and rebuild. To modify a post's URL, just rename its directory and rebuild. Re-publishing or re-pinning a post will bump its publication date. You can't unpublish or unpin a post yet, but maybe I'll add that soon.

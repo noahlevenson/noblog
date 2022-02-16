@@ -26,7 +26,7 @@ if not os.path.exists(f"{path}/index.html"):
   sys.exit()
 
 with open(f"{path}/{cfg['PUB']}", "w") as pub:
-  pub.write(f"TIMESTAMP: {str(int(time.time()))}\nPIN: False\n")
+  pub.write(f"TIMESTAMP: {str(int(time.time()))}\nPIN: True\n")
 
 subprocess.call(["chmod", "755", f"{path}"])
-print(f"Published post: /{url}")
+print(f"Pinned post: /{url}")

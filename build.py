@@ -50,7 +50,7 @@ for pinned_post in pinned:
   posts_t.remove(pinned_post)
 
 with open(f"{cfg['DIST']}/index.html", "w") as index:
-  index.write(f"<link rel=\"stylesheet\" href=\"style.css\"><title>{cfg['BLOG_TITLE']}</title><body id=\"index\"><table>")
+  index.write(f"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"style.css\"><title>{cfg['BLOG_TITLE']}</title><body id=\"index\"><table>")
   
   # Write all the pinned posts to the top
   for pinned_post in pinned:

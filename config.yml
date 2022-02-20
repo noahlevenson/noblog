@@ -1,9 +1,0 @@
-NEW: new.py
-BUILD: build.py
-PUBLISH: pub.py
-DIST: ./dist
-PUB: pub.yml
-TEMPLATE: index.html
-CSS: style.css
-POST_TITLE: $TITLE
-BLOG_TITLE: Noah Levenson's homepage
